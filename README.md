@@ -39,3 +39,11 @@ we'll attempt to report important values for both.
 * `process.cpu` lost `user` and `sys` time, so we're now reporting `total`
 * Added `process.cpu.max_file_descriptors`
 * 
+
+### Docker
+
+`make docker` will build an image based on alpine, tagged `prometheus-elasticsearch-exporter`. You can also do `TAG=myrepo/mytag make docker`.
+
+### Smoke test
+
+`make docker; docker-compose up` will run the exporter against the lastest Elasticsearch. Test it with `curl localhost:9108/metrics`. 

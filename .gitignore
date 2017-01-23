@@ -1,4 +1,5 @@
 .build
 elasticsearch_exporter
+elasticsearch_exporter_amd64_linux
 *.tar.gz
 *-stamp

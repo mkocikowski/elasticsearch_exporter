@@ -1,0 +1,9 @@
+version: '2'
+services:
+  elasticsearch:
+    image: "elasticsearch:latest"
+  exporter:
+    image: "prometheus-elasticsearch-exporter"
+    command: "-es.uri http://elasticsearch:9200"
+    ports: 
+      - "9108:9108"
